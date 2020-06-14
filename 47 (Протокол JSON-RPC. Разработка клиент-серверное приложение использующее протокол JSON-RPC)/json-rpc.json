@@ -1,0 +1,13 @@
+{
+    "jsonrpc": "2.0",
+    "method": "square",
+    "params": [3, 4],
+    "id": 1
+}
+
+{
+    "jsonrpc": "2.0",
+    "method": "circle",
+    "params": 3,
+    "id": "1"
+}

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="minimum-scale=1.0, width=device-width, maximum-scale=1.0, user-scalable=no">
+        <title>WebSocket</title>
+    </head>
+
+    <body>
+        <header>
+            <h1>WebSocket</h1>
+            <span id="status">Offline</span>
+        </header>
+
+        <main>
+            <ul id="messages"></ul>
+
+            <form id="form">
+                <input type="text" id="input" required autofocus autocomplete="off">
+            </form>
+        </main>
+
+        <script>
+            var ws = new WebSocket("ws://localhost:3000");
+
+            const status = document.getElementById('status');
+            const messages = document.getElementById('messages');
+            const form = document.getElementById('form');
+            const input = document.getElementById('input');
+
+            function setStatus(value) {
+                status.innerHTML = value;
+            }
+
+            function printMessage(value) {
+                const li = document.createElement('li');
+                li.innerHTML = value;
+                messages.appendChild(li);
+            }
+
+            form.addEventListener("submit", event => {
+                event.preventDefault();
+                ws.send(JSON.stringify(input.value));
+                input.value = "";
+            })
+
+            ws.onopen = () => {
+                setStatus("Online");
+            }
+
+            ws.onclose = () => {
+                setStatus("Disconnected");
+            }
+
+            ws.onmessage = resp => {
+                printMessage(resp.data);
+            }
+        </script>
+    </body>
+</html>

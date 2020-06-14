@@ -1,0 +1,7 @@
+C:\Users\yury.karlianok\Desktop\NodeJS Экз\Exec\Exec\bin\Debug\Exec.exe.config
+C:\Users\yury.karlianok\Desktop\NodeJS Экз\Exec\Exec\bin\Debug\Exec.exe
+C:\Users\yury.karlianok\Desktop\NodeJS Экз\Exec\Exec\bin\Debug\Exec.pdb
+C:\Users\yury.karlianok\Desktop\NodeJS Экз\Exec\Exec\obj\Debug\Exec.csprojAssemblyReference.cache
+C:\Users\yury.karlianok\Desktop\NodeJS Экз\Exec\Exec\obj\Debug\Exec.csproj.CoreCompileInputs.cache
+C:\Users\yury.karlianok\Desktop\NodeJS Экз\Exec\Exec\obj\Debug\Exec.exe
+C:\Users\yury.karlianok\Desktop\NodeJS Экз\Exec\Exec\obj\Debug\Exec.pdb
